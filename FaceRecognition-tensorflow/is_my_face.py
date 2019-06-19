@@ -129,7 +129,8 @@ def cnnLayer():
 
 output = cnnLayer()  
 predict = tf.argmax(output, 1)  
-   
+  
+# call trained model 
 saver = tf.train.Saver()  
 sess = tf.Session()  
 saver.restore(sess, tf.train.latest_checkpoint('.'))  
